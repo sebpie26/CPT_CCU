@@ -1,0 +1,35 @@
+Bern-model: #Joos et al. (2013) and IPPC AR6 Chapter 7S M
+  r_CO2: 1.33e-5   # Radiative efficiency (W /m² /ppb)
+  r_CH4: 3.88e-4
+  r_N2O: 3.2e-3
+  tau_1_CO2: 394.4 # Atmospheric lifetimes (years)
+  tau_2_CO2: 36.54
+  tau_3_CO2: 4.304
+  tau_CH4: 11.8
+  tau_N2O: 109
+  a_0_CO2: 0.2173 # Bern model weights for CO2 (dimensionless)
+  a_1_CO2: 0.2240
+  a_2_CO2: 0.2824
+  a_3_CO2: 0.2763
+
+SARF-model: #Meinshausen et al. (2020), https://doi.org/10.5194/gmd-13-3571-2020
+  CO2_C: 429.12 #ppm, July 2026, https://gml.noaa.gov/ccgg/trends/
+  CH4_C: 1937.59 #ppb
+  N2O_C: 339.78 #ppb
+  CO2_C0: 277.15 #ppm
+  CO2_a1: -2.4785e-7 #W /m² /ppm²
+  CO2_b1: 7.5906e-4 #W /m² /ppm
+  CO2_c1: -2.1492e-3 #W /m² /sqrt(ppb)
+  CO2_d1: 5.2488 #W /m²
+  N2O_N0: 273.87 #ppb
+  N2O_a2: -3.4197e-4 #W /m² /ppm
+  N2O_b2: 2.5455e-4 #W /m² /ppm
+  N2O_c2: -2.4357e-4 #W /m² /ppm
+  N2O_d2:  1.2173 #W /m² /sqrt(ppb)
+  CH4_M0: 731.41 #ppb
+  CH4_a3: -8.9603e-5 #W /m² /ppm
+  CH4_b3: -1.2462e-4 #W /m² /ppm
+  CH4_c3: 4.5194e-2 #W /m² /sqrt(ppb)
+
+
+
