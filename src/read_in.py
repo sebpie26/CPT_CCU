@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-
+"""This module is not relevant to run main.py"""
 
 def read_emission_flows_csv(filepath):
     """
@@ -48,7 +48,7 @@ def read_emission_flows_csv(filepath):
 
 if __name__ == "__main__":
     
-    filepath = "C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/data/emission_flows.csv"
+    filepath = "C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/data/emission_flows.csv"
 
     g_emit, g_stored, g_net = read_emission_flows_csv(filepath)
 

@@ -8,6 +8,7 @@ import csv
 
 import read_in
 
+"""This module is not relevant to run main.py"""
 
 def discount_ts(g_flows, SDR_list):
 
@@ -82,10 +83,10 @@ def print_min_max_values(disc_GHG_flows):
 
 
 if __name__ == "__main__":
-    save_path = f"C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/results/{time.time()}/"
+    save_path = f"C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/results/{int(time.time())}/"
     os.makedirs(save_path)
 
-    filepath_emission_data = "C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/data/emission_flows.csv"
+    filepath_emission_data = "C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/data/emission_flows.csv"
     g_emit, g_stored, g_net = read_in.read_emission_flows_csv(filepath_emission_data)
     
     SDR_list = [-0.03, -0.01, 0.0, 0.01, 0.03, 0.09]

@@ -87,8 +87,8 @@ def analytical_CPT(g_released, g_stored, model_params, lifetime, TH, SDR):
 
 if __name__ == "__main__":
 
-    filepath_xlsx = 'C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/data/emission_flows_2.xlsx'
-    filepath_yaml = 'C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/data/model_parameters.yaml'
+    filepath_xlsx = 'C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/data/emission_flows_3.xlsx'
+    filepath_yaml = 'C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/data/model_parameters.yaml'
 
     model_params, g_construction, g_operation, g_raw_material_acquisition, g_decommissioning, g_prod_use_phase, \
         g_prod_EOL, g_stored, g_released, g_net = read_data.read_emission_flows_xlsx(filepath_xlsx, filepath_yaml)

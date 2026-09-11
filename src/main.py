@@ -106,38 +106,38 @@ def save_and_plot_resutls(g_dict, gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals
 
 if __name__ == "__main__":
 
-    filepath_xlsx = 'C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/data/emission_flows_3.xlsx'
-    filepath_yaml = 'C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/data/model_parameters.yaml'
+    filepath_xlsx = 'C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/data/emission_flows_3.xlsx'
+    filepath_yaml = 'C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/data/model_parameters.yaml'
 
     model_params, g_construction, g_operation, g_raw_material_acquisition, g_decommissioning, g_prod_use_phase, \
         g_prod_EOL, g_stored, g_released, g_net = read_data.read_emission_flows_xlsx(filepath_xlsx, filepath_yaml)
 
 
-    """lifetime = 50 #Lifetime of plant
+    lifetime = 50 #Lifetime of plant
     TH_list = [100, 500] #List of impact modelling periods
     SDR_list = [-0.03, -0.01, 0.0, 0.01, 0.03, 0.09] #List of social discount rates
 
     show_or_save = 'save' # None, 'show', 'save'; Flag for not creating, showing, or saving plots. 
-    save_path = f"C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/results/{int(time.time())}/"
+    save_path = f"C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/results/{int(time.time())}/"
     os.makedirs(save_path)
 
 
     gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals_dict, g_dict = \
         SA_CPT(model_params=model_params, g_construction=g_construction, g_operation=g_operation, g_raw_material_acquisition=g_raw_material_acquisition, \
                g_decommissioning=g_decommissioning, g_prod_use_phase=g_prod_use_phase, g_prod_EOL=g_prod_EOL, g_stored=g_stored, g_released=g_released, \
-                g_net=g_net, lifetime=lifetime, TH_list=TH_list, SDR_list=SDR_list, save_path=save_path, show_or_save=show_or_save)"""
+                g_net=g_net, lifetime=lifetime, TH_list=TH_list, SDR_list=SDR_list, save_path=save_path, show_or_save=show_or_save)
 
 
     # For testing of plots and excel
-    g_dict = {'construction': g_construction, 'operation': g_operation, 'raw_material_acquisition': g_raw_material_acquisition, \
+    """g_dict = {'construction': g_construction, 'operation': g_operation, 'raw_material_acquisition': g_raw_material_acquisition, \
               'decommissioning': g_decommissioning, 'prod_use_phase': g_prod_use_phase, 'prod_EOL': g_prod_EOL, 'stored': g_stored, \
                 'released': g_released, 'net': g_net}
     
-    pkl_save_path = 'C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/results/1787236990/SA_CPT.pkl'
+    pkl_save_path = 'C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/results/1787236990/SA_CPT.pkl'
     with open(pkl_save_path, 'rb') as file:
         (g_dict, gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals_dict, SDR_list, TH_list, save_path, show_or_save) = pickle.load(file) #New: (g_dict, gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals_dict, SDR_list, TH_list, save_path, show_or_save) #Old: (g_released, g_stored, g_net, SDR_list, TH_list, extm_vals_dict, GWI_data_dict, gCPT_dict, aCPT_dict)
 
-    save_path = 'C:/Users/Sebastian/Documents/VSC Workspace/Individual project Industrial ecology/results/1787236990/'
-    show_or_save = 'save'
+    save_path = 'C:/Users/Sebastian/Documents/Coding projects/CPT_CCU/results/1787236990/'
+    show_or_save = 'save'"""
 
     save_and_plot_resutls(g_dict, gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals_dict, SDR_list, TH_list, save_path, show_or_save)

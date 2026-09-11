@@ -3,6 +3,7 @@ import scipy.integrate as integrate
 import pandas as pd
 import matplotlib.pyplot as plt
 
+"""This module is not relevant to run main.py"""
 
 ### Parameters
 # Should be moved to a yaml file at one point
