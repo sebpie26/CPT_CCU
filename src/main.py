@@ -86,8 +86,8 @@ def SA_CPT(model_params, g_construction, g_operation, g_raw_material_acquisition
 
 def save_and_plot_resutls(g_dict, gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals_dict, SDR_list, TH_list, save_path, show_or_save):
 
-
-    """pkl_data = (g_dict, gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals_dict, SDR_list, TH_list, save_path, show_or_save)
+    ### comment out from here if a pickle file is read for testing of plots and excel
+    pkl_data = (g_dict, gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals_dict, SDR_list, TH_list, save_path, show_or_save)
     pkl_save_path = save_path+'SA_CPT.pkl'
     
     with open(pkl_save_path, 'wb') as file:
@@ -95,13 +95,13 @@ def save_and_plot_resutls(g_dict, gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals
 
     
     xlsx_path = write_results_to_excel(gCPT_dict=gCPT_dict, aCPT_dict=aCPT_dict, GWI_data_dict=GWI_data_dict, extm_vals_dict=extm_vals_dict, g_dict=g_dict, 
-                                       TH_list=TH_list, SDR_list=SDR_list, save_path=save_path)"""
+                                       TH_list=TH_list, SDR_list=SDR_list, save_path=save_path)
 
-    
+
     if show_or_save != None:
         plot_report_figures.plot_all_for_main(g_dict, gCPT_dict, aCPT_dict, GWI_data_dict, extm_vals_dict, SDR_list, TH_list, save_path, show_or_save)
-        """for data_flag in ['net', 'released', 'stored']:
-            plot_report_figures.plot_SA_CPT_results(GWI_data_dict[data_flag], data_flag, SDR_list, TH_list, save_path, show_or_save)"""
+        for data_flag in ['net', 'released', 'stored']:
+            plot_report_figures.plot_SA_CPT_results(GWI_data_dict[data_flag], data_flag, SDR_list, TH_list, save_path, show_or_save)
 
 
 if __name__ == "__main__":
@@ -128,7 +128,7 @@ if __name__ == "__main__":
                 g_net=g_net, lifetime=lifetime, TH_list=TH_list, SDR_list=SDR_list, save_path=save_path, show_or_save=show_or_save)
 
 
-    # For testing of plots and excel
+    # Remove commenting for testing of plots and excel. Therefore, comment out from lifetime = 50 to the line above this comment. 
     """g_dict = {'construction': g_construction, 'operation': g_operation, 'raw_material_acquisition': g_raw_material_acquisition, \
               'decommissioning': g_decommissioning, 'prod_use_phase': g_prod_use_phase, 'prod_EOL': g_prod_EOL, 'stored': g_stored, \
                 'released': g_released, 'net': g_net}
